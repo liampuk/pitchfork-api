@@ -88,7 +88,7 @@ function parseUrls(data, verbose) {
 }
 
 module.exports.query = function query(options, callback) {
-    let genre = '', start = 0, size = 1, sort = 'desc', verbose = false;
+    let genre = '', start = 0, size = 1, sort = 'asc', verbose = false;
     if ('genre' in options) {
         if (genres.includes(options.genre)) {
             genre = options.genre;
@@ -124,5 +124,3 @@ module.exports.query = function query(options, callback) {
         .then((res) => callback(null, res))
         .catch((err) => callback(err));
 }
-
-module.exports.testExport = 2;
