@@ -1,6 +1,6 @@
 {
   "name": "pitchfork-api",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Unofficial Pitchfork API for scraping review text",
   "main": "index",
   "scripts": {
