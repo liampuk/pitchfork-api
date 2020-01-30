@@ -1,0 +1,23 @@
+{
+  "name": "pitchfork-api",
+  "version": "1.0.1",
+  "description": "Unofficial Pitchfork API for scraping review text",
+  "main": "index",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liampuk/pitchfork-api.git"
+  },
+  "keywords": [
+    "pitchfork",
+    "api"
+  ],
+  "author": "liampuk <liamp.uk@gmail.com> (http://liamp.uk)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/liampuk/pitchfork-api/issues"
+  },
+  "homepage": "https://github.com/liampuk/pitchfork-api#readme"
+}
