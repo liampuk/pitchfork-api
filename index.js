@@ -65,7 +65,7 @@ function runSearchQuery(genre, start, size, sort, verbose) {
                         }
                     })
             })
-            .catch(err => console.log(err));
+            .catch(err => reject(err));
     });
 }
 
@@ -80,7 +80,6 @@ function parseUrls(data, verbose) {
                     reviews.push({ rating: rating, url: review.url });
                 } else {
                     reviews.push({ url: review.url });
-                    console.log('rating: ' + review.tombstone.albums[0].rating.display_rating + ", url: " + review.url);
                 }
             }
         })
@@ -88,14 +87,14 @@ function parseUrls(data, verbose) {
     return reviews;
 }
 
-function entry(options, callback) {
+function query(options, callback) {
     let genre = '', start = 0, size = 1, sort = 'desc', verbose = false;
-    if ('genre' in options){
-        if(genres.includes(options.genre)){
+    if ('genre' in options) {
+        if (genres.includes(options.genre)) {
             genre = options.genre;
-        }else{
+        } else {
             callback(new Error('genre must be valid.'))
-            return; 
+            return;
         }
     }
     if ('start' in options && !isNaN(options.start)) {
@@ -126,14 +125,4 @@ function entry(options, callback) {
         .catch((err) => callback(err));
 }
 
-var optionsGlobal = {
-    genre: 'jazz',
-    start: 0,
-    size: 3,
-    sort: 'asc',
-    verbose: true
-}
-
-entry(optionsGlobal, (err, res) => {
-    console.log(res);
-});
+module.exports.query = query;
