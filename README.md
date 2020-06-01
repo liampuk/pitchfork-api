@@ -1,5 +1,7 @@
 # Pitchfork API
 
+[![npm version](https://badge.fury.io/js/pitchfork-api.svg)](https://badge.fury.io/js/pitchfork-api)
+
 Unofficial Pitchfork API for scraping review text.
 
 ## Install
